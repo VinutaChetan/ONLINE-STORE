@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cityname:</strong>
+  <%= @region.cityname %>
+</p>
+
+<h4>Related Stores</h4>
+<%@region.stores.each do |store|%> 
+	<%= link_to store.name,store_path(store) %><br/>
+<%end %>	
+
+<%= link_to 'Edit', edit_region_path(@region) %> |
+<%= link_to 'Back', regions_path %></br/>
+<br/>
